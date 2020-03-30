@@ -41,7 +41,7 @@ prompt.start();
 prompt.get(['num1', 'num2', 'operation'], userInput);
 
 
-// // TODO => How do I use '.get' propertly?
+// // TODO => How do I use '.get' properly?
 // prompt.get(['Would you like to calculate?'], playAgainInput);
 
 
