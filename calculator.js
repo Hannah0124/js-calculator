@@ -8,7 +8,7 @@ const greeting = function() {
   console.log('We have the following operators.')
   console.log('======================================')
 
-  for (let operator of operators) {
+  for (const operator of operators) {
     console.log(operator);
   }
   console.log('\n')

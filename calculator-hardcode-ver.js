@@ -180,7 +180,7 @@ const modulo = function(input) {
 
 
 const printResult = function(inputExamples) {
-  for (let example of inputExamples) {
+  for (const example of inputExamples) {
     try {
       console.log(`\'${example.operation}\' operator:`)
       console.log(`  - Result: ${(calculator(example))}`);
