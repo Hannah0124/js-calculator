@@ -145,22 +145,23 @@ const printFormula = function(input) {
   console.log(`  - Formula: ${input.num1} ${input.operation} ${input.num2} = ${input.result}`)
 }
 
-const add = function(input) {
+// practice arrow functions
+const add = (input) => {
   input.operation = "+"
   return input.num1 + input.num2;
 }
 
-const subtract = function(input) {
+const subtract = (input) => {
   input.operation = "-"
   return input.num1 - input.num2;
 }
 
-const multiply = function(input) {
+const multiply = (input) => {
   input.operation = "*"
   return input.num1 * input.num2;
 }
 
-const divide = function(input) {
+const divide = (input) => {
   input.operation = "/"
   if (input.num2 === 0) {
     console.log('  ❗️You cannot divide number by 0\n')
@@ -168,7 +169,7 @@ const divide = function(input) {
   return input.num1 / input.num2;
 }
 
-const exponent = function(input) {
+const exponent = (input) => {
   input.operation = "**"
   return input.num1 ** input.num2;
 }
@@ -180,7 +181,7 @@ const modulo = function(input) {
 
 
 const printResult = function(inputExamples) {
-  for (const example of inputExamples) {
+  inputExamples.forEach(example => {
     try {
       console.log(`\'${example.operation}\' operator:`)
       console.log(`  - Result: ${(calculator(example))}`);
@@ -188,7 +189,7 @@ const printResult = function(inputExamples) {
     } catch (e) {
       console.error(e);
     }
-  }
+  })
 }
 
 printResult(inputExamples);
