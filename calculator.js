@@ -27,29 +27,29 @@ function calculator(input) {
   switch (input.operation) {
     case 'add':
     case '+':
-        input.result = add(input)
-        break;
+      input.result = add(input)
+      break;
     case 'subtract':
     case '-':
-        input.result = subtract(input)
-        break;
+      input.result = subtract(input)
+      break;
     case 'multiply':
     case '*':
-        input.result = multiply(input)
-        break;
+      input.result = multiply(input)
+      break;
     case 'divide':
     case '/':
-        input.result = divide(input)
-        break;
+      input.result = divide(input)
+      break;
     case 'exponent':
     case '^':
     case '**':
-        input.result = exponent(input)
-        break;
+      input.result = exponent(input)
+      break;
     case 'modulo':
     case '%':
-        input.result = modulo(input)
-        break;
+      input.result = modulo(input)
+      break;
     default:
         console.log('⚠️  Invalid operator!\n');
   }
