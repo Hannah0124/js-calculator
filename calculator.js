@@ -25,27 +25,33 @@ const calculator = function(input) {
   switch (input.operation) {
     case 'add':
     case '+':
+      input.operation = "+";
       input.result = add(input);
       break;
     case 'subtract':
     case '-':
+      input.operation = "-";
       input.result = subtract(input);
       break;
     case 'multiply':
     case '*':
+      input.operation = "*";
       input.result = multiply(input);
       break;
     case 'divide':
     case '/':
+      input.operation = "/";
       input.result = divide(input);
       break;
     case 'exponent':
     case '^':
     case '**':
+      input.operation = "**";
       input.result = exponent(input);
       break;
     case 'modulo':
     case '%':
+      input.operation = "%";
       input.result = modulo(input);
       break;
     default:
@@ -71,38 +77,21 @@ const validateOperator = (input) => input.operation = input.operation.toLowerCas
 
 const printFormula = (input) => console.log(`  - Formula: ${input.num1} ${input.operation} ${input.num2} = ${input.result}`);
 
-const add = (input) => {
-  input.operation = "+";
-  return input.num1 + input.num2;
-};
 
-const subtract = (input) => {
-  input.operation = "-";
-  return input.num1 - input.num2;
-};
+const add = (input) => { return input.num1 + input.num2; };
 
-const multiply = (input) => {
-  input.operation = "*";
-  return input.num1 * input.num2;
-};
+const subtract = (input) => { return input.num1 - input.num2; };
 
-const divide = (input) => {
-  input.operation = "/";
-  if (input.num2 === 0) {
-    console.log('\n❗️You cannot divide a number by 0')
-  }
+const multiply = (input) => { return input.num1 * input.num2; };
+
+const divide = (input) => { 
+  (input.num2 === 0) ? console.log('\n❗️You cannot divide a number by 0') : next
   return input.num1 / input.num2;
 };
 
-const exponent = (input) => {
-  input.operation = "**";
-  return input.num1 ** input.num2;
-};
+const exponent = (input) => { return input.num1 ** input.num2; };
 
-const modulo = (input) => {
-  input.operation = "%";
-  return input.num1 % input.num2;
-};
+const modulo = (input) => { return input.num1 % input.num2; };
 
 const main = () => {
   greeting();
@@ -215,32 +204,38 @@ main();
 //   switch (input.operation) {
 //     case 'add':
 //     case '+':
+//       input.operation = "+";
 //       input.result = add(input);
 //       break;
 //     case 'subtract':
 //     case '-':
+//       input.operation = "-";
 //       input.result = subtract(input);
 //       break;
 //     case 'multiply':
 //     case '*':
+//       input.operation = "*";
 //       input.result = multiply(input);
 //       break;
 //     case 'divide':
 //     case '/':
+//       input.operation = "/";
 //       input.result = divide(input);
 //       break;
 //     case 'exponent':
 //     case '^':
 //     case '**':
+//       input.operation = "**";
 //       input.result = exponent(input);
 //       break;
 //     case 'modulo':
 //     case '%':
+//       input.operation = "%";
 //       input.result = modulo(input);
 //       break;
 //     default:
-//       throw '  ❗️  Invalid operator!\n';
-//     };
+//       console.log('❗️Invalid operator!\n');
+//   };
 
 //     printFormula(input);
 //     return input.result;
@@ -265,38 +260,20 @@ main();
 // };
 
 // // practice arrow functions
-// const add = (input) => {
-//   input.operation = "+"
-//   return input.num1 + input.num2;
-// };
+// const add = (input) => { return input.num1 + input.num2; };
 
-// const subtract = (input) => {
-//   input.operation = "-"
-//   return input.num1 - input.num2;
-// };
+// const subtract = (input) => { return input.num1 - input.num2; };
 
-// const multiply = (input) => {
-//   input.operation = "*"
-//   return input.num1 * input.num2;
-// };
+// const multiply = (input) => { return input.num1 * input.num2; };
 
-// const divide = (input) => {
-//   input.operation = "/"
-//   if (input.num2 === 0) {
-//     console.log('  ❗️You cannot divide number by 0\n')
-//   }
+// const divide = (input) => { 
+//   (input.num2 === 0) ? console.log('\n❗️You cannot divide a number by 0') : next
 //   return input.num1 / input.num2;
 // };
 
-// const exponent = (input) => {
-//   input.operation = "**"
-//   return input.num1 ** input.num2;
-// };
+// const exponent = (input) => { return input.num1 ** input.num2; };
 
-// const modulo = function(input) {
-//   input.operation = "%"
-//   return input.num1 % input.num2;
-// };
+// const modulo = (input) => { return input.num1 % input.num2; };
 
 
 // const printResult = function(inputExamples) {
