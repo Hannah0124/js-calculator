@@ -73,16 +73,16 @@ const validateNumbers = function(input) {
 
 
 // practice arrow functions
-const validateOperator = (input) => input.operation = input.operation.toLowerCase();
+const validateOperator = input => input.operation = input.operation.toLowerCase();
 
 const printFormula = (input) => console.log(`  - Formula: ${input.num1} ${input.operation} ${input.num2} = ${input.result}`);
 
 
-const add = (input) => { return input.num1 + input.num2; };
+const add = input => {return input.num1 + input.num2;} ;
 
-const subtract = (input) => { return input.num1 - input.num2; };
+const subtract = input => { return input.num1 - input.num2; };
 
-const multiply = (input) => { return input.num1 * input.num2; };
+const multiply = input => { return input.num1 * input.num2; };
 
 const divide = (input) => { 
   if (input.num2 === 0) {
