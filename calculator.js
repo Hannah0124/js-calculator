@@ -78,11 +78,11 @@ const validateOperator = input => input.operation = input.operation.toLowerCase(
 const printFormula = (input) => console.log(`  - Formula: ${input.num1} ${input.operation} ${input.num2} = ${input.result}`);
 
 
-const add = input => {return input.num1 + input.num2;} ;
+const add = input => input.num1 + input.num2;
 
-const subtract = input => { return input.num1 - input.num2; };
+const subtract = input => input.num1 - input.num2;
 
-const multiply = input => { return input.num1 * input.num2; };
+const multiply = input => input.num1 * input.num2;
 
 const divide = (input) => { 
   if (input.num2 === 0) {
@@ -91,9 +91,9 @@ const divide = (input) => {
   return input.num1 / input.num2;
 };
 
-const exponent = (input) => { return input.num1 ** input.num2; };
+const exponent = (input) => input.num1 ** input.num2;
 
-const modulo = (input) => { return input.num1 % input.num2; };
+const modulo = (input) => input.num1 % input.num2;
 
 const main = () => {
   greeting();
